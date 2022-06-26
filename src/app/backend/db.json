@@ -5,7 +5,7 @@
             "descripcion": "Bolsa de arroz de 900 g",
             "price": 7000,
             "cantidad": 20,
-            "total": 14000
+            "total": 140000
         },
         {
             "id": 2,
@@ -15,7 +15,6 @@
             "cantidad": 40,
             "total": 80000
         },
-
         {
             "id": 3,
             "nombre": "Pechuga",
@@ -23,7 +22,6 @@
             "price": 10000,
             "cantidad": 20,
             "total": 200000
-
         }
     ]
 }

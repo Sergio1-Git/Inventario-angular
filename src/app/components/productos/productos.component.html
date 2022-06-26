@@ -29,11 +29,10 @@
                 </mat-form-field>
                 <mat-form-field class="number example-full-width" appearance="fill">
                     <mat-label>Precio total</mat-label>
-                    <input readonly="" type="number" matInput placeholder="" value="{{cantidad * precio}}" formControlName="total">
+                    <input readonly type="number" matInput placeholder="" [value]="cantidad * precio" formControlName="total">
                 </mat-form-field>
                 <button [disabled]="form.invalid" mat-button mat-raised-button color="primary" class="btn_añadir" (click)="registrarProducto()">Añadir</button>
             </div>
         </form>
     </div>
-
 </div>

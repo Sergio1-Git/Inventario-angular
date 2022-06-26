@@ -32,7 +32,7 @@ export class ProductosComponent implements OnInit {
       descripcion: ['', [Validators.required]],
       cantidad: [0, [Validators.required, Validators.min(1)]],
       precio: [0, [Validators.required, Validators.min(1)]],
-      total: [0, [Validators.required]],
+      total: 0,
     });
 
   }

@@ -1,0 +1,29 @@
+{
+    "products": [{
+            "id": 1,
+            "nombre": "Arroz",
+            "descripcion": "Bolsa de arroz de 900 g",
+            "price": 7000,
+            "cantidad": 20,
+            "total": 14000
+        },
+        {
+            "id": 2,
+            "nombre": "Cocacola",
+            "descripcion": "Botella de cocacola de 1L",
+            "price": 2000,
+            "cantidad": 40,
+            "total": 80000
+        },
+
+        {
+            "id": 3,
+            "nombre": "Pechuga",
+            "descripcion": "Pechuga de 1Kg",
+            "price": 10000,
+            "cantidad": 20,
+            "total": 200000
+
+        }
+    ]
+}

@@ -1,0 +1,74 @@
+:root {
+    --background: #c4dbfd;
+}
+
+.fondo {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background: #c4dbfd;
+}
+
+.titulo {
+    padding-top: 40px;
+}
+
+.title {
+    /* margin-top: 40px; */
+    text-align: center;
+    /* font-size: 22px; */
+}
+
+.body {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 50% 50%;
+    padding: 20px;
+}
+
+.display {
+    width: 70%;
+    margin: auto;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 5px;
+}
+
+.titulo {
+    grid-column: 1/2;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center;
+  align-items: center; */
+    margin: auto;
+    width: 70%;
+    padding: 30px;
+    background: #fff;
+    border-radius: 5px;
+}
+
+.example-form {
+    background: #ffffff;
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.example-full-width {
+    /* display: block; */
+    width: 100%;
+}
+
+.number {
+    width: 40%;
+}
+
+.btn_añadir {
+    width: 50%;
+    margin: auto;
+}

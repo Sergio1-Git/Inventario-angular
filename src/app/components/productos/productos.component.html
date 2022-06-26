@@ -1,0 +1,39 @@
+<div class="fondo">
+    <div class="titulo">
+        <h1 class="title">Inventario de productos</h1>
+    </div>
+
+    <div class="body">
+        <div class="display">
+            <h2>Lista de productos</h2>
+            <app-producto [productos]="product" *ngFor="let product of productos"></app-producto>
+        </div>
+        <form [formGroup]="form">
+            <div class="container">
+                <h2>Agregar al inventario</h2>
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Nombre</mat-label>
+                    <input matInput placeholder="" [value]="" formControlName="nombre">
+                </mat-form-field>
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Descripción</mat-label>
+                    <input matInput placeholder="" [value]="" formControlName="descripcion">
+                </mat-form-field>
+                <mat-form-field class="number example-full-width" appearance="fill">
+                    <mat-label>Cantidad</mat-label>
+                    <input type="number" matInput placeholder="" min="1" [(ngModel)]="cantidad" [value]="" formControlName="cantidad">
+                </mat-form-field>
+                <mat-form-field class="number example-full-width" appearance="fill">
+                    <mat-label>Precio individual</mat-label>
+                    <input type="number" matInput placeholder="" min="1" [(ngModel)]="precio" [value]="" formControlName="precio">
+                </mat-form-field>
+                <mat-form-field class="number example-full-width" appearance="fill">
+                    <mat-label>Precio total</mat-label>
+                    <input readonly="" type="number" matInput placeholder="" value="{{cantidad * precio}}" formControlName="total">
+                </mat-form-field>
+                <button [disabled]="form.invalid" mat-button mat-raised-button color="primary" class="btn_añadir" (click)="registrarProducto()">Añadir</button>
+            </div>
+        </form>
+    </div>
+
+</div>

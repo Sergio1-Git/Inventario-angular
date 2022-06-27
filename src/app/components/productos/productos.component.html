@@ -21,11 +21,11 @@
                 </mat-form-field>
                 <mat-form-field class="number example-full-width" appearance="fill">
                     <mat-label>Cantidad</mat-label>
-                    <input type="number" matInput placeholder="" min="1" [(ngModel)]="cantidad" [value]="" formControlName="cantidad">
+                    <input type="number" matInput placeholder="" [ngClass]="{ceros:cantidad==0}" min="1" [(ngModel)]="cantidad" [value]="" formControlName="cantidad">
                 </mat-form-field>
                 <mat-form-field class="number example-full-width" appearance="fill">
                     <mat-label>Precio individual</mat-label>
-                    <input type="number" matInput placeholder="" min="1" [(ngModel)]="precio" [value]="" formControlName="precio">
+                    <input type="number" matInput placeholder="" [ngClass]="{ceros:precio==0}" min="1" [(ngModel)]="precio" [value]="" formControlName="precio">
                 </mat-form-field>
                 <mat-form-field class="number example-full-width" appearance="fill">
                     <mat-label>Precio total</mat-label>

@@ -1,9 +1,10 @@
+<app-nav></app-nav>
 <div class="fondo">
     <div class="titulo">
         <h1 class="title">Inventario de productos</h1>
     </div>
 
-    <div class="body">
+    <div class="body" id="body">
         <div class="display">
             <h2>Lista de productos</h2>
             <app-producto [productos]="product" *ngFor="let product of productos"></app-producto>
@@ -21,11 +22,11 @@
                 </mat-form-field>
                 <mat-form-field class="number example-full-width" appearance="fill">
                     <mat-label>Cantidad</mat-label>
-                    <input type="number" matInput placeholder="" [ngClass]="{ceros:cantidad==0}" min="1" [(ngModel)]="cantidad" [value]="" formControlName="cantidad">
+                    <input type="number" matInput placeholder="" [ngClass]="{ ceros:cantidad==0 }" min="1" [(ngModel)]="cantidad" [value]="" formControlName="cantidad">
                 </mat-form-field>
                 <mat-form-field class="number example-full-width" appearance="fill">
                     <mat-label>Precio individual</mat-label>
-                    <input type="number" matInput placeholder="" [ngClass]="{ceros:precio==0}" min="1" [(ngModel)]="precio" [value]="" formControlName="precio">
+                    <input type="number" matInput placeholder="" [ngClass]="{ ceros:precio==0 }" min="1" [(ngModel)]="precio" [value]="" formControlName="precio">
                 </mat-form-field>
                 <mat-form-field class="number example-full-width" appearance="fill">
                     <mat-label>Precio total</mat-label>
@@ -35,4 +36,7 @@
             </div>
         </form>
     </div>
+    <button class="btn btn-primary">
+  holaaa
+</button>
 </div>

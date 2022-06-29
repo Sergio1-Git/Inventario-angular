@@ -4,7 +4,8 @@ import { MatDialog } from '@angular/material/dialog';
 import { ProductInterface } from 'src/app/interfaces/product-interface';
 import { ProductService } from 'src/app/services/product.service';
 import { DialogComponent } from '../dialog/dialog.component';
-
+import { jsPDF } from "jspdf";
+// import * as $ from 'jquery';
 
 @Component({
   selector: 'app-productos',
@@ -75,4 +76,10 @@ export class ProductosComponent implements OnInit {
     });
   }
 
+  // generarPDF() {
+  //   const doc = new jsPDF();
+  //   doc.text('hello word', 10, 10);
+  //   // doc.fromHTML($('#body').get(0), 15, 15);
+  //   doc.save('lista.pdf');
+  // }
 }

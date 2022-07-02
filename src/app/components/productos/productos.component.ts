@@ -15,8 +15,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class ProductosComponent implements OnInit {
 
-  cantidad: number = 0;
-  precio: number = 0;
+  cantidad!: number;
+  precio!: number;
   total: number = this.cantidad * this.precio;
   n: number = 120;
   productos: ProductInterface[] = [];

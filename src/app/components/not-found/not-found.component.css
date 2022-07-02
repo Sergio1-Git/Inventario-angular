@@ -1,0 +1,10 @@
+div {
+    margin: 30px auto;
+    display: flex;
+}
+
+img {
+    width: 800px;
+    margin: auto;
+    text-align: center;
+}

@@ -14,6 +14,7 @@ import { DialogComponent } from './components/dialog/dialog.component';
 import { HomeComponent } from './components/home/home.component';
 import { AgregarComponent } from './components/agregar/agregar.component';
 import { ModificarComponent } from './components/modificar/modificar.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import { ModificarComponent } from './components/modificar/modificar.component';
     HomeComponent,
     AgregarComponent,
     ModificarComponent,
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,

@@ -5,6 +5,7 @@ import { ProductInterface } from 'src/app/interfaces/product-interface';
 import { ProductService } from 'src/app/services/product.service';
 import { DialogComponent } from '../dialog/dialog.component';
 import { jsPDF } from "jspdf";
+import { ActivatedRoute, Router } from '@angular/router';
 // import * as $ from 'jquery';
 
 @Component({
@@ -22,7 +23,7 @@ export class ProductosComponent implements OnInit {
 
   public form!: FormGroup;
 
-  constructor(private productService: ProductService, private formBuilder: FormBuilder, public dialog: MatDialog) { }
+  constructor(private productService: ProductService, private formBuilder: FormBuilder, public dialog: MatDialog, private router: Router, private activateRouter: ActivatedRoute) { }
 
   ngOnInit(): void {
 
@@ -82,4 +83,9 @@ export class ProductosComponent implements OnInit {
   //   // doc.fromHTML($('#body').get(0), 15, 15);
   //   doc.save('lista.pdf');
   // }
+
+
+  back(): void {
+    this.router.navigate(['']);
+  }
 }

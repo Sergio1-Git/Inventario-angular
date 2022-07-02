@@ -11,6 +11,9 @@ import { MaterialModule } from './material/material/material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { DialogComponent } from './components/dialog/dialog.component';
+import { HomeComponent } from './components/home/home.component';
+import { AgregarComponent } from './components/agregar/agregar.component';
+import { ModificarComponent } from './components/modificar/modificar.component';
 
 
 @NgModule({
@@ -20,6 +23,10 @@ import { DialogComponent } from './components/dialog/dialog.component';
     ProductosComponent,
     ProductoComponent,
     DialogComponent,
+    NavComponent,
+    HomeComponent,
+    AgregarComponent,
+    ModificarComponent,
   ],
   imports: [
     BrowserModule,

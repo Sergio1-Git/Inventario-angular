@@ -1,0 +1,30 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 50%;
+    padding: 30px;
+    background: #fff;
+    border-radius: 5px;
+}
+
+.example-form {
+    background: #ffffff;
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.example-full-width {
+    /* display: block; */
+    width: 100%;
+}
+
+.number {
+    width: 40%;
+}
+
+.btn_añadir {
+    width: 50%;
+    margin: auto;
+}

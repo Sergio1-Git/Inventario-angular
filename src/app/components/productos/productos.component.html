@@ -1,5 +1,5 @@
-<app-nav></app-nav>
 <div class="fondo">
+    <button class="volver btn btn-primary" (click)="back()"><mat-icon>keyboard_return</mat-icon>Regresar</button>
     <div class="titulo">
         <h1 class="title">Inventario de productos</h1>
     </div>
@@ -7,7 +7,7 @@
     <div class="body" id="body">
         <div class="display">
             <h2>Lista de productos</h2>
-            <app-producto [productos]="product" *ngFor="let product of productos"></app-producto>
+            <app-producto [productos]="product" [indice]="i" *ngFor="let product of productos; let i=index"></app-producto>
         </div>
         <form [formGroup]="form">
             <div class="container">
@@ -36,7 +36,4 @@
             </div>
         </form>
     </div>
-    <button class="btn btn-primary">
-  holaaa
-</button>
 </div>

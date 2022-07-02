@@ -1,0 +1,27 @@
+<form [formGroup]="form">
+    <p>{{ productChosen }}</p>
+    <div class="container">
+        <h2>Agregar al inventario</h2>
+        <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Nombre</mat-label>
+            <input matInput placeholder="" value="{{productChosen.nombre}}" formControlName="nombre">
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Descripción</mat-label>
+            <input matInput placeholder="" value="{{productChosen.descripcion}}" formControlName="descripcion">
+        </mat-form-field>
+        <mat-form-field class="number example-full-width" appearance="outline">
+            <mat-label>Cantidad</mat-label>
+            <input type="number" matInput placeholder="" [ngClass]="{ ceros:cantidad==0 }" min="1" value="{{productChosen.cantidad}}" formControlName="cantidad">
+        </mat-form-field>
+        <mat-form-field class="number example-full-width" appearance="outline">
+            <mat-label>Precio individual</mat-label>
+            <input type="number" matInput placeholder="" [ngClass]="{ ceros:precio==0 }" min="1" value="{{productChosen.precio}}" formControlName="precio">
+        </mat-form-field>
+        <mat-form-field class="number example-full-width" appearance="outline">
+            <mat-label>Precio total</mat-label>
+            <input type="number" matInput placeholder="" value="{{productChosen.total}}" formControlName="total">
+        </mat-form-field>
+        <button type="submit" mat-button mat-raised-button color="primary" class="btn_añadir" (click)="modificarProducto()">Actualizar</button>
+    </div>
+</form>

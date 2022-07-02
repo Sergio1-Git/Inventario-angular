@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { ProductInterface } from '../interfaces/product-interface';
+import { ProductInterface, UpdateProduct } from '../interfaces/product-interface';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -18,7 +18,9 @@ export class ProductService {
   getAllProducts() {
     return this.http.get<ProductInterface[]>(this.apiUrl);
   }
-
+  getProduct(id: string) {
+    return this.http.get<ProductInterface>(`${this.apiUrl}/${id}`);
+  }
   /**
    * @description Mediante esta función realizamos una petición a la api rest en ejecución
    * de enviar unos datos con el método POST, creando un nuevo objeto de este tipo con los
@@ -26,5 +28,13 @@ export class ProductService {
    */
   addNewProduct(nuevo: ProductInterface): Observable<ProductInterface[]> {
     return this.http.post<ProductInterface[]>(this.apiUrl, nuevo);
+  }
+
+  updateProduct(id: number, dto: UpdateProduct) {
+    return this.http.put<ProductInterface>(`${this.apiUrl}/${id}`, dto);
+  }
+
+  delete(id: number) : Observable<ProductInterface[]> {
+    return this.http.delete<ProductInterface[]>(`${this.apiUrl}/${id}`);
   }
 }

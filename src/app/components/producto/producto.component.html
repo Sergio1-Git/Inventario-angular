@@ -1,7 +1,15 @@
 <mat-card>
+    <!-- {{ indice+1 }} -->
+    <p hidden>{{ productos.id }}</p>
     <h2>{{productos.nombre}}</h2>
     <p>{{productos.descripcion }}</p>
     <p>{{productos.cantidad}}</p>
-    <p>{{productos.price | currency:'COP'}}</p>
+    <p>{{productos.precio | currency:'COP'}}</p>
     <p>{{productos.total | currency:'COP'}}</p>
+    <a [routerLink]="['/modificar',indice+1]">
+        <mat-icon color="primary">border_color</mat-icon>
+    </a>
+    <button (click)="eliminarProducto()">
+        <mat-icon color="warn">delete</mat-icon>
+    </button>
 </mat-card>
